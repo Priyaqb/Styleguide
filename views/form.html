@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Starter-Kit</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="../styles/main.css" rel="stylesheet">
+    <link href="../libs/prism/prism.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/country-region-dropdown-menu/1.2.1/geodatasource-countryflag.min.css" rel="stylesheet">
+    <style>
+        .sidebar a[href$="form.html"] {
+          color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+    <h3>Components</h3>
+    <a href="../views/header.html">Header</a>
+    <a href="../views/footer.html">Footer</a>
+    <a href="../views/form.html">Form</a>
+</div>
+        <div class="content">
+            <h2>Normal Form</h2>
+            <div><form>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" name="first-name" placeholder="First Name">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" name="last-name" placeholder="Last Name">
+    </div>
+    <div class="form-group">
+        <!-- <input type="checkbox" id="terms-condition">
+        <label for="terms-condition">I agree to the Terms and Conditions</label> -->
+
+        <label class="form-checkbox" for="terms-condition">I agree to the Terms and Conditions
+          <input type="checkbox" checked="checked" id="terms-condition">
+          <span class="checkmark"></span>
+        </label>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form></div>
+            <div class="wrap-code">
+                <div class="block-code">
+                    <h2>HTML:</h2>
+                    <button data-attr="copyHTMLTarget" class="copyCode">Copy</button>
+                    <div class="code" id="copyHTMLTarget">
+                        <pre class="language-markup"><code><script type="text/plain"><form>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" name="first-name" placeholder="First Name">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" name="last-name" placeholder="Last Name">
+    </div>
+    <div class="form-group">
+        <!-- <input type="checkbox" id="terms-condition">
+        <label for="terms-condition">I agree to the Terms and Conditions</label> -->
+
+        <label class="form-checkbox" for="terms-condition">I agree to the Terms and Conditions
+          <input type="checkbox" checked="checked" id="terms-condition">
+          <span class="checkmark"></span>
+        </label>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form></script></code></pre>
+                    </div>
+                </div>
+                <div class="block-code">
+                    <h2>CSS: </h2>
+                    <button data-attr="copyCSSTarget" class="copyCode">Copy</button>
+                    <div class="code"  id="copyCSSTarget">
+                        <pre data-src="../styles/normalForm.css"> </pre></div>
+                </div>
+            </div>
+            <h2>Shipping Info Form</h2>
+            <span style="color: red">NB: Added <a href="">country-region-dropdown-menu</a> plugin for country dopdown with flags</span>
+            <div><form>
+    <h3 class="sub-title">Shipping Information</h3>
+    <div class="form-group">
+        <label>Name</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block" name="first-name" placeholder="First Name">
+            <input type="text" class="form-control flex-block" name="last-name" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Billing Address</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block flex-9" name="last-name" placeholder="Billing Address">
+            <input type="text" name="shipping[address-2]" placeholder="Apt #" class="form-control flex-block">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="flex-row flex-block-space">
+            <div class="flex-block">
+                <label>State</label>
+                <input type="text" class="form-control" name="state" placeholder="State">
+            </div>
+            <div class="flex-block">
+                <label>Country</label>
+                <select class="gds-cr gds-countryflag" country-data-region-id="gds-cr-three"></select>
+                <span style="visibility: hidden;">Region: </span>
+                <select style="visibility: hidden;" id="gds-cr-three"></select>
+                <!-- <div class="niceCountryInputSelector" style="width: 300px;" data-selectedcountry="US" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+            data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback" /> -->
+            </div>
+        </div>
+    </div>
+    <h3 class="sub-title">Billing Information</h3>
+    <div class="form-group">
+        <label>Card Type</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block" name="state" placeholder="State">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="flex-row flex-block-space">
+            <div class="flex-block flex-9">
+                <label>Card Number</label>
+                <input type="text" name="" placeholder="Card #" class="form-control">
+            </div>
+            <div class="flex-block">
+                <label>CVC</label>
+                <input type="text" name="" placeholder="CVC" class="form-control">
+            </div>
+            <div class="flex-block">
+                <label>Expiration</label>
+                <div class="flex-row flex-block-space">
+                    <input type="text" name="" placeholder="Card #" class="flex-block form-control">
+                    <input type="text" name="" placeholder="Card #" class="flex-block form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form></div>
+            <div class="wrap-code">
+                <div class="block-code">
+                    <h2>HTML:</h2>
+                    <button data-attr="copyHTMLTarget1" class="copyCode">Copy</button>
+                    <div class="code" id="copyHTMLTarget1">
+                        <pre class="language-markup"><code><script type="text/plain"><form>
+    <h3 class="sub-title">Shipping Information</h3>
+    <div class="form-group">
+        <label>Name</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block" name="first-name" placeholder="First Name">
+            <input type="text" class="form-control flex-block" name="last-name" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Billing Address</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block flex-9" name="last-name" placeholder="Billing Address">
+            <input type="text" name="shipping[address-2]" placeholder="Apt #" class="form-control flex-block">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="flex-row flex-block-space">
+            <div class="flex-block">
+                <label>State</label>
+                <input type="text" class="form-control" name="state" placeholder="State">
+            </div>
+            <div class="flex-block">
+                <label>Country</label>
+                <select class="gds-cr gds-countryflag" country-data-region-id="gds-cr-three"></select>
+                <span style="visibility: hidden;">Region: </span>
+                <select style="visibility: hidden;" id="gds-cr-three"></select>
+                <!-- <div class="niceCountryInputSelector" style="width: 300px;" data-selectedcountry="US" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+            data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback" /> -->
+            </div>
+        </div>
+    </div>
+    <h3 class="sub-title">Billing Information</h3>
+    <div class="form-group">
+        <label>Card Type</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block" name="state" placeholder="State">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="flex-row flex-block-space">
+            <div class="flex-block flex-9">
+                <label>Card Number</label>
+                <input type="text" name="" placeholder="Card #" class="form-control">
+            </div>
+            <div class="flex-block">
+                <label>CVC</label>
+                <input type="text" name="" placeholder="CVC" class="form-control">
+            </div>
+            <div class="flex-block">
+                <label>Expiration</label>
+                <div class="flex-row flex-block-space">
+                    <input type="text" name="" placeholder="Card #" class="flex-block form-control">
+                    <input type="text" name="" placeholder="Card #" class="flex-block form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form></script></code></pre>
+                    </div>
+                </div>
+                <div class="block-code">
+                    <h2>CSS: </h2>
+                    <button data-attr="copyCSSTarget1" class="copyCode">Copy</button>
+                    <div class="code"  id="copyCSSTarget1">
+                        <pre data-src="../styles/shippingForm.css"> </pre></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../libs/prism/prism.js"></script>
+    <script src="../libs/prism/prism-embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/country-region-dropdown-menu/1.2.1/geodatasource-cr.min.js"></script>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

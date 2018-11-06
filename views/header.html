@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Starter-Kit</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="../styles/main.css" rel="stylesheet">
+    <link href="../libs/prism/prism.css" rel="stylesheet">
+    <style>
+        .sidebar a[href$="header.html"] {
+          color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+    <h3>Components</h3>
+    <a href="../views/header.html">Header</a>
+    <a href="../views/footer.html">Footer</a>
+    <a href="../views/form.html">Form</a>
+</div>
+        <div class="content">
+            <div><header class="site-header">
+    <h1 class="site-logo"><a href="#" class="site-logo__link">Logo</a></h1>
+    <nav id="site-nav">
+        <ul class="menu">
+            <li class="menu__item"><a href="#" class="link menu__link">Home</a></li>
+            <li class="menu__item"><a href="#" class="link menu__link">About</a></li>
+            <li class="menu__item"><a href="#" class="link menu__link">Contact</a></li>
+            <li class="menu__item"><a href="#" class="header__button header__button--normal hide-element">Sign Up</a></li>
+        </ul>
+    </nav>
+    <div class="header__button header__button--toggle" id="toggle-icon">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+</header></div>
+            <div class="wrap-code">
+                <div class="block-code">
+                    <h2>HTML:</h2>
+                    <button id="copyHTMLButton">Copy</button>
+                    <div class="code" id="copyHTMLTarget">
+                        <pre class="language-markup"><code><script type="text/plain"><header class="site-header">
+    <h1 class="site-logo"><a href="#" class="site-logo__link">Logo</a></h1>
+    <nav id="site-nav">
+        <ul class="menu">
+            <li class="menu__item"><a href="#" class="link menu__link">Home</a></li>
+            <li class="menu__item"><a href="#" class="link menu__link">About</a></li>
+            <li class="menu__item"><a href="#" class="link menu__link">Contact</a></li>
+            <li class="menu__item"><a href="#" class="header__button header__button--normal hide-element">Sign Up</a></li>
+        </ul>
+    </nav>
+    <div class="header__button header__button--toggle" id="toggle-icon">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+</header></script></code></pre>
+                    </div>
+                </div>
+                <div class="block-code">
+                    <h2>CSS: </h2>
+                    <button id="copyCSSButton">Copy</button>
+                    <div class="code" id="copyCSSTarget">
+                        <pre data-src="../styles/header.css"> </pre></div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <script src="../libs/prism/prism.js"></script>
+    <script src="../libs/prism/prism-embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
