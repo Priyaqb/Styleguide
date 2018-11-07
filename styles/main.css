@@ -1036,7 +1036,13 @@ body {
       width: 50%; }
   .wrap-code .copyCode {
     float: right;
-    margin-top: 16px; }
+    margin-top: 16px;
+    background: #75890c;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer; }
 
 .code {
   float: left;
