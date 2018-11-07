@@ -75,6 +75,9 @@ body {
   .site-footer .link--footer {
     display: inline-block;
     margin-right: 2rem; }
+    @media screen and (max-width: 768px) {
+      .site-footer .link--footer {
+        font-size: 1rem; } }
   .site-footer .footer__links {
     padding-left: 1rem;
     padding-right: 1rem; }
@@ -85,6 +88,9 @@ body {
     padding-right: 1rem; }
   .site-footer .footer__social-icon {
     fill: #a4a4a4; }
+    @media screen and (max-width: 768px) {
+      .site-footer .footer__social-icon {
+        width: 16px; } }
     .site-footer .footer__social-icon:hover {
       fill: #fff;
       -webkit-transition: fill .3s linear;
