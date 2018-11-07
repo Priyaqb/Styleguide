@@ -933,6 +933,56 @@ body {
     padding: 10px;
     text-decoration: none; }
 
+.main-page {
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  background: -o-linear-gradient(top, #75890c 0%, #a4b357 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #75890c), color-stop(100%, #a4b357));
+  background: -webkit-linear-gradient(top, #75890c 0%, #a4b357 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#75890c), to(#a4b357));
+  background: linear-gradient(to bottom, #75890c 0%, #a4b357 100%);
+  background: #75890c;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75890c', endColorstr='#a4b357', GradientType=0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: Arial;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh; }
+  .main-page h1, .main-page a {
+    text-align: center;
+    font-size: 35px; }
+  .main-page a {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: Arial;
+    color: #fff;
+    text-decoration: none;
+    width: 125px;
+    font-size: 17px;
+    margin: 0 auto; }
+
 .content {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
